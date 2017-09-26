@@ -21,7 +21,7 @@ install: true
 script:
   - unset _JAVA_OPTIONS
   - mvn -Dsurefire.useFile=false -Dcheckstyle.skip=true test
-sudo: false
+sudo: true
 cache:
   directories:
     - $HOME/.m2
