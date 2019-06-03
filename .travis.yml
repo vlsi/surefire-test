@@ -20,6 +20,7 @@ language: java
 install: true
 script:
   - unset _JAVA_OPTIONS
+  - while sleep 1m; do pkill -3 java; done &
   - mvn -Dsurefire.useFile=false -Dcheckstyle.skip=true test
 sudo: true
 cache:
